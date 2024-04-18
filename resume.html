@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박지나</title>
+    <style>
+        :root {
+            --primary-color: #773dbe;
+            --bg-color:#DDEAF3;
+            --box-bg:#fff
+        }
+        body{background: var(--bg-color);}
+        main {
+            width: 960px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color)
+        }
+
+        footer {
+            background-color: var(--box-bg);
+            padding: 50px;
+            text-align: center;
+        }
+        .box{background-color: var(--box-bg);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .avatar {width: 200px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        }
+        .flex{display: flex;  /* 자식요소들을 옆으로 */
+          
+        align-items: center;  /* 세로정렬을 가운데로 */
+        gap:20px  /*요소들의 간격을 띄워라(=margin)  */
+        }
+        
+        .box-inner{border: 1px solid #000;
+            text-align: center;border: 1px solid #000;}
+    </style>
+</head>
+
+<body>
+    <h1>허쌤 홈</h1>
+    <!--  -->
+    <main>
+        <div class="box intro flex">
+            <img class="avatar" src="./img/avatar.jpg" alt="나의 사진">
+            <p>안녕하세요,저는 아름답고 기능적인 웹사이트를 만드는 데 열정적인 <b class="darkblue">웹 개발자 제니</b>입니다.</p>
+       
+        </div>
+        <img src="" alt="">
+        <div class="box resume">
+            <h2 class="darkblue">WORK</h2>
+            <ul>
+             <li><a href="./jeju/">제주도[23.11.29]</a></li>
+             <li><a href="./cheongwadae/">청와대[23.11.30]</a></li>
+
+            </ul>
+        </div>
+        <div class="box contact">
+            <h2 class="darkblue">연락처</h2>
+            <div class="box-inner">
+                <button class="darkblue">연락처 보기/숨기기</button>
+                <div class="contact-info" id="contact-info">
+                    <p><b>이메일</b>: heopoint@gmail.com</p>
+                    <p><b>전화번호</b>: 010-1234-5678</p>
+                    <p><b>소셜미디어</b>: <a href="https://www.facebook.com/honggildong">Facebook</a>, <a
+                            href="https://www.twitter.com/honggildong">Twitter</a>, <a
+                            href="https://www.instagram.com/honggildong">Instagram</a></p>
+            </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

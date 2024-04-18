@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .avatar{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar .img{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            background-image: url(/Gsap/thefinal_logo.png);
+            animation: avatarAni 1.5s steps(7) infinite;
+
+        }
+
+        @keyframes avatarAni {
+            100%{
+                background-position-x: -3500px;
+            }
+        }
+    </style>
+</head>
+<h1>steps</h1>
+<body>
+    <div class="avatar">
+        <div class="img"></div>
+    </div>
+</body>
+</html>

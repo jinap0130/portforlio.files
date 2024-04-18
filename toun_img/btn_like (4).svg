@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1c0be;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #b9b9b9;
+      }
+    </style>
+  </defs>
+  <g id="그룹_3965" data-name="그룹 3965" transform="translate(-899 -4813)">
+    <rect id="사각형_147864" data-name="사각형 147864" class="cls-1" width="20" height="20" transform="translate(899 4813)"/>
+    <path id="Icon_heart" class="cls-2" d="M16.1,3.364a4.611,4.611,0,0,0-6.5.5l-.686.74-.686-.74a4.611,4.611,0,0,0-6.5-.5,5.4,5.4,0,0,0-.345,7.577l6.738,7.282a1.058,1.058,0,0,0,1.577,0l6.738-7.282A5.4,5.4,0,0,0,16.1,3.364Z" transform="translate(900.001 4812.752)"/>
+  </g>
+</svg>

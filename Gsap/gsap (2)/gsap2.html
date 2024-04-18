@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="./gsap2.css">
+</head>
+
+<body>
+    <main>
+        <section id="section1" class="item">
+            <span class="item_num">01</span>
+            <div class="item_text t1">Creative</div>
+            <div class="item_text t2">Collaborative</div>
+            <div class="item_text t3">Challenging</div>
+            <div class="item_text t4">Learining</div>
+            <div class="item_img"></div>
+        </section>
+        <section id="section2" class="item">
+            <span class="item_num">02</span>
+            <div class="item_text t1">흥미로운</div>
+            <div class="item_text t2">작업결과물을</div>
+            <div class="item_text t3">구경해 보시겠어요?</div>
+        </section>
+        <section id="section3" class="item">
+            <span class="item_num">03</span>
+            <div class="item_img i1"><img src="./imgs/pf1.jpg" alt="" /></div>
+            <div class="item_img i2"><img src="./imgs/pf2.jpg" alt="" /></div>
+            <div class="item_img i3"><img src="./imgs/pf3.jpg" alt="" /></div>
+        </section>
+        <section id="section4" class="item">
+            <span class="item_num">04</span>
+            <div class="item_img i1"><img src="./imgs/work_ (1).jpg" alt="" /></div>
+            <div class="item_img i2"><img src="./imgs/work_ (2).jpg" alt="" /></div>
+            <div class="item_img i3"><img src="./imgs/work_ (3).jpg" alt="" /></div>
+            <div class="item_img i4"><img src="./imgs/work_ (4).jpg" alt="" /></div>
+            <div class="item_img i5"><img src="./imgs/work_ (5).jpg" alt="" /></div>
+            <div class="item_img i6"><img src="./imgs/work_ (6).jpg" alt="" /></div>
+        </section>
+        <section id="section5" class="item">
+            <span class="item_num">05</span>
+            <div class="item_text">한결같되 날로 새롭게</div>
+        </section>
+        <section id="section6" class="item">
+            <span class="item_num">06</span>
+            <div class="item_img"></div>
+        </section>
+        <section id="section7" class="item">
+            <span class="item_num">07</span>
+            <div class="item_text t1">고객의 목적에 맞는</div>
+            <div class="item_text t2">디자인 콘셉트를 지향합니다</div>
+            <div class="item_text t3">이용자가</div>
+            <div class="item_text t4">이해하기 쉽도록</div>
+            <div class="item_text t5">효과적으로</div>
+            <div class="item_text t6">전달하는</div>
+            <div class="item_text t7">디자인 감각을 보유하고 있습니다.</div>
+        </section>
+        <section id="section8" class="item">
+            <span class="item_num">08</span>
+            <div class="item_img"></div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+    <script>
+        // section1----------------------------------------
+        const ani1 = gsap.timeline()
+        ani1.from('#section1 .t1', { xPercent: 300 }, 'text')
+            .from('#section1 .t2', { xPercent: -300 }, 'text')
+            .from('#section1 .t3', { xPercent: 300 }, 'text')
+            .from('#section1 .t4', { xPercent: -300 }, 'text')
+            .to('#section1 .item_img', {
+                rotation: 720,
+                scale: 0,
+                borderRadius: 200,
+            })
+            .to('#section1 .item_img', {
+                rotation: 0,
+                scale: 1,
+                borderRadius: 20,
+            })
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: '#section1',
+            start: 'top top',
+            end: '+=4000',//position parameter
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            // markers: 1
+        })
+        // section2----------------------------------------
+        const ani2 = gsap.timeline()
+        // innerWidth 디바이스 width만큼
+        ani2.from("#section2 .t1", { x: innerWidth * 1 })
+        ani2.from("#section2 .t2", { x: innerWidth * -1 })
+        ani2.from("#section2 .t3", { x: innerWidth * 1 })
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: '#section2',
+            start: 'top top',
+            end: '+=4000',//position parameter
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            // markers: 1
+        })
+        // section3----------------------------------------
+        const ani3 = gsap.timeline()
+        ani3.from("#section3 .i1", { y: -100, autoAlpha: 0, borderRadius: 200 })
+        ani3.from("#section3 .i2", { y: 100, autoAlpha: 0, borderRadius: 200 })
+        ani3.from("#section3 .i3", { y: -100, autoAlpha: 0, borderRadius: 200 })
+        ScrollTrigger.create({
+            animation: ani3,
+            trigger: '#section3',
+            start: 'top top',
+            end: '+=2000',
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true,
+        })
+        // section4----------------------------------------
+        const ani4 = gsap.timeline()
+        ani4.from("#section4  .item_img", {
+            y: gsap.utils.wrap([-200, 200, -100, 100]),
+            autoAlpha: 0,
+            borderRadius: 200,
+            ease: 'back.out(4)',
+            stagger: {
+                each: .02,
+                from: 'random'//end,center,edges
+            }
+
+        })
+        ScrollTrigger.create({
+            animation: ani4,
+            trigger: '#section4',
+            start: 'top top',
+            end: '+=4000',
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true,
+        })
+        // section5----------------------------------------
+        const ani5 = gsap.timeline()
+        ani5.to("#section5  .item_text", {
+            scale: 60,
+        })
+            .to('#section5 .item_text', { autoAlpha: 0 })
+        ScrollTrigger.create({
+            animation: ani5,
+            trigger: '#section5',
+            start: 'top top',
+            end: '+=3000',
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true,
+        })
+        // section6----------------------------------------
+        const ani6 = gsap.timeline()
+        ani6.from("#section6  .item_img", {
+            autoAlpha: 0,
+            scale: 5,
+            width:'100vw',
+            height:'100vh'
+        })
+        ScrollTrigger.create({
+            animation: ani6,
+            trigger: '#section6',
+            start: 'top top',
+            end: '+=3000',
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true,
+        })
+        // section7----------------------------------------
+        const ani7 = gsap.timeline()
+        ani7.from("#section7  .t1", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+            .from("#section7  .t2", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+            .from("#section7  .t3", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+            .from("#section7  .t4", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+            .from("#section7  .t5", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+            .from("#section7  .t6", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+            .from("#section7  .t7", { autoAlpha: 0, duration: 1, y: 50 }, '+=1')
+        ScrollTrigger.create({
+            animation: ani7,
+            trigger: '#section7',
+            start: 'top top',
+            end: '+=6000',
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true,
+        })
+        // section8----------------------------------------
+        const ani8 = gsap.timeline()
+        ani8.from("#section8  .item_img", {})
+    </script>
+</body>
+
+</html>

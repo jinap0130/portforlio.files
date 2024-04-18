@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input,
+        #add-text[type='text'] {
+            padding: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>나의 할일</h1>
+        <input type="text" id="add-text">
+        <button id="add-button">추가</button>
+        <div class="container">
+
+            <p>할일목록</p>
+            <ul id="memo-list">
+                <!-- input에 입력하면 >>  -->
+            </ul>
+        </div>
+    </div>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script>
+        $('#add-button').click(function () {
+            const text = $('#add-text').val()
+            // alert(text)
+            if (text) {
+                //add list
+                addTodo(text)
+                // alert(text)
+                //값 입력하고 자동으로 빈칸 안에 지워짐
+                $('#add-text').val('').focus()
+            }
+        })
+        function addTodo(text) {
+            const $li = $('<li>').addClass('flex')
+            const $p = $('<p>').text(text)
+
+            const $div = $('<div>').addClass('flex')
+            const $deleteBtn = $('<button>').text('삭제').addClass('delete-btn')
+            const $editBtn = $('<button>').text('수정').addClass('edit-btn')
+            $div.append($editBtn, $deleteBtn)
+            $li.append($p, $div)
+
+            $('#memo-list').append($li)
+
+            $deleteBtn.click(function () {
+                $li.remove()
+            })
+
+            $editBtn.click(function () {
+                const $editInput = $('<input>').attr('type', 'text').addClass('edit-inpit').val($p.text())
+                //(변경할 값을 입력할 수 있는 input 생성)
+                const $saveBtn = $('<button>').text('저장').addClass('save-btn')
+                //값을 저장할 수 있도록 하는 버튼 
+                $p.hide()//$<p>사라져
+                $deleteBtn.hide()
+                $editBtn.hide()//$deleteBtn, $editBtn사라져 
+                $div.append($editInput, $saveBtn)//$div 에 새로운 값과 저장버튼 추가 
+
+
+
+                $saveBtn.click(function () {
+                const newText = $editInput.val()
+                if (newText) {
+                    $p.text(newText).show()
+                    $deleteBtn.show()
+                    $editBtn.show()
+                    $editInput.remove()
+                    $saveBtn.remove()
+                
+                }
+            })
+            })
+
+
+        }
+        //json은 ""로 사용,분류함
+
+    </script>
+</body>
+
+</html>

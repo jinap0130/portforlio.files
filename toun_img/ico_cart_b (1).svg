@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#1b1b1b;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="그룹_162151" data-name="그룹 162151" transform="translate(-312 -14)">
+        <g id="그룹_161893" data-name="그룹 161893" transform="translate(-1274 -442)">
+            <g id="그룹_161713" data-name="그룹 161713">
+                <path id="사각형_428" data-name="사각형 428" class="cls-2" transform="translate(1592.5 466.75)" d="M0 0h15v12.5H0z"/>
+                <path id="패스_376" data-name="패스 376" class="cls-2" d="M1604.25 466.75v-1.758a4.25 4.25 0 0 0-8.5 0v1.758"/>
+            </g>
+        </g>
+        <path id="사각형_430" data-name="사각형 430" transform="translate(312 14)" style="fill:none" d="M0 0h28v28H0z"/>
+    </g>
+</svg>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube_exaple</title>
+    <link rel="stylesheet" href="./cube.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <div id="cube" class="cube1">
+            <div class="face front">front</div>
+            <div class="face back">back</div>
+            <div class="face right">right</div>
+            <div class="face left">left</div>
+            <div class="face top">top</div>
+            <div class="face bottom">bottom</div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li class="on">front</li>
+            <li>right</li>
+            <li>back</li>
+            <li>left</li>
+            <li>top</li>
+            <li>bottom</li>
+        </ul>
+    </nav>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>$('nav li').click(function () {
+            $('nav li').removeClass('on')
+            $(this).addClass('on')
+            let i = $(this).index()
+            $('#cube').removeClass()
+            $('#cube').addClass(`cube${i+1}`)
+        })
+
+    </script>
+</body>
+
+</html>

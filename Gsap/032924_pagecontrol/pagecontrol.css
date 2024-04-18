@@ -1,0 +1,63 @@
+@import url(/reset.css);
+
+html,body{
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+body{
+    background: #B5b5b5;
+}
+section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #f00;
+    overflow: hidden;
+}
+
+h2{
+    color:#341c01;
+    font-size: 10vw;
+    position: absolute;
+    top: -4.5vw;
+    opacity: .5;
+}
+
+section:nth-child(even) h2{
+    right: -2vw;
+}
+section:nth-child(odd) h2{
+    left: -2vw;
+}
+
+
+/* NAV------------------------------------------------------------------------------ */
+nav{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(0, 0, 0,.4);
+    padding: 15px 20px;
+    border-radius: 90px;
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+}
+nav li a{
+    display: block;
+    padding: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+nav li a.on{
+
+    background: #fff;
+    color: #341c01;
+    border-radius: 99px;
+}
+

@@ -1,0 +1,26 @@
+:root{
+    --mainColor:#ed4043;
+    --subColor:#16a2d5;
+
+    --white:#fff;
+    --black:#000;
+    --black100:#222;
+
+    --mainEng-font:"Binggrae";
+    --mainKor-font:"Binggrae";
+    --Bold-font:"Binggae-bold";
+
+    --gap1rem:gap:12rem;
+    --justify-cent{justify-content: center;}
+    --justify-btw{justify-content: space-between;}
+    --align-it{align-items: center}
+
+
+    font-family: var(--mainKor-font);
+
+
+
+    body{
+        color:var(--black100)
+    }
+}

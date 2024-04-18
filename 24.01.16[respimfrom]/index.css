@@ -1,0 +1,286 @@
+/* @import url(//reset.css); */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+/* .wrap{
+    width: ;
+} */
+
+/* ------------------------------------------------ */
+/* body>section>article>figure(>img/figcaption)/h2 */
+
+header {
+    width: 100%;
+    /* position: fixed; */
+}
+
+.top-slide {
+    height: 35px;
+    background: #442b05;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .vslide {
+    border: 1px solid #ff0;
+} */
+
+.top-slide ul li {
+    text-align: center;
+}
+
+
+.top-slide ul li a {
+    color: antiquewhite;
+    padding: 6px;
+    display: inline-block;
+    margin: auto;
+}
+
+/* .wrap{
+    position: relative;
+} */
+/* .inner-wrap{
+    position: absolute;
+} */
+
+.header-inner {
+    max-width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 101px;
+    border: 1px solid #000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+h1 a img {
+    width: 100px;
+    height: 25px;
+    border: 1px solid #f00;
+}
+
+.menu {
+    gap: 30px;
+    border: 1px solid #0f0;
+}
+
+nav ul {
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    /* font-family: 'Cormorant Garamond', serif; */
+}
+
+.icons {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f00;
+    margin: 2px;
+}
+
+/* slide-container> slide-wrap> slide> text>h2/slide-img */
+.text {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.text h2 {
+    font-size: 30px;
+}
+
+.text h1 {
+    font-size: 42px;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide-container {
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.slide-wrap {
+    width: 500%;
+}
+
+.slide {
+    position: relative;
+}
+
+/* - */
+.caterogies {
+    width: 1430px;
+    height: 625px;
+    margin: auto;
+    position: relative;
+}
+
+.catg-menu {
+    justify-content: center;
+}
+
+.catg-menu h2 {
+    margin: 6px;
+    padding: 25px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.catg-contents img {
+    width: 350px;
+    height: 430px;
+}
+
+.img-hover {
+    position: absolute;
+    /* border: 5px solid #f00; */
+    left: 0;
+
+}
+
+.catg-contents ul li {
+    position: relative;
+}
+
+.catg-contents {
+    position: absolute;
+}
+
+.catg-contwrap {
+    position: relative;
+    height: 430px;
+}
+
+/* :hover */
+
+
+.img-hover {
+    display: none;
+}
+
+.catg-contents ul li:hover .img-hover {
+    display: inline-block;
+}
+
+.catg-contents {
+    display: none;
+}
+
+.on {
+    display: block;
+}
+
+
+/* bg-attatchmet: .bg-100p .center */
+
+.bg-100p {
+    height: 100%;
+    background-size: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    position: relative;
+}
+
+.bg h2 {
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #f00; */
+    /* font-family: 'Cormorant Garamond', serif; */
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 200%;
+
+}
+
+/* 
+.bg{
+    background-image: url(./images/\(1\)\ PC_3840\ 1600.jpg);
+    background-attachment: fixed;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+} */
+
+.bg {
+    background-image: url(./images/\(1\)\ PC_3840\ 1600.jpg);
+    background-attachment: fixed;
+    height: 80vh;
+    background-size: cover;
+    /* opacity: 0.7; */
+}
+
+.bg::before {
+    content: "";
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+}
+/* .inspiration::before{
+    content: "";
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
+.inspiration h2{
+    font-family: 'Cormorant Garamond', serif;
+    margin: 6px;
+    padding: 25px;
+    justify-content: center;
+}
+
+

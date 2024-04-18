@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/css/0315pin.css">
+</head>
+<body>
+    <main>
+        <section id="section1" class="item">
+            <span class="item_num">01</span>
+            <div class="item_text t1">Creative</div>
+            <div class="item_text t2">Collaborative</div>
+            <div class="item_text t3">Challenging</div>
+            <div class="item_text t4">Learining</div>
+            <div class="item_img1 item-imgs"></div>
+            <div class="item_img2 item-imgs"></div>
+            <div class="item_img3 item-imgs"></div>
+            <div class="item_img4 item-imgs"></div>
+        </section>
+        
+
+        <section id="section2" class="item">
+            <span class="item_num">02</span>
+
+
+
+
+
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+    <script>
+     //section1----------------------------------
+     const ani1=gsap.timeline()
+        ani1.to('#section1 .t1',{xPercent:300},'text')
+            .to('#section1 .t2',{xPercent:-300},'text')
+            .to('#section1 .t3',{xPercent:300},'text')
+            .to('#section1 .t4',{xPercent:-300},'text')
+            .to('#section1 .item_img2',{rotation:720,
+            scale:0, borderRadius:200, })
+            .to('#section1 .item_img3',{rotation:720,
+            scale:0, borderRadius:200, })
+            .to('#section1 .item_img1',{rotation:720,
+            scale:0, borderRadius:200, })
+            // .to('#section1 .item_img2',{rotation:720,
+            // scale:0, borderRadius:200, })
+            // .to('#section1 .item_img3',{rotation:720,
+            // scale:0, borderRadius:200, })
+            .to('#section1 .item_img4',{rotation:720,
+            scale:0, borderRadius:200, })
+            .to('#section1 .item_img1',{rotation:0,scale:1.1, borderRadius:20,})
+            .to('#section1 .item_img3',{rotation:0,scale:.7, borderRadius:20,})
+            .to('#section1 .item_img2',{rotation:0,scale:.8, borderRadius:20,})
+            .to('#section1 .item_img4',{rotation:0,scale:.5, borderRadius:20,})
+
+        ScrollTrigger.create({
+            animation:ani1,
+            trigger:'#section1',
+            start:'top top',
+            end:'+=4000',//position parameter 
+            scrub:true, 
+            pin:true,
+            anticipatePin:1,
+            markers:1,
+
+            //scrub > fill control **scrol제어할때 무조건적으로 들어가야 할/ 일반 자바로는 debounce? 
+        })
+
+
+        //
+    </script>
+</body>
+</html>

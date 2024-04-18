@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/* 작업영역 1200지점!!!!!!  */
+.inner,
+main {
+    width: 1200px;
+    margin: auto;
+}
+
+
+/* header------------------------------------------------------------------- */
+header {
+    height: 100px;
+    padding-bottom: 30px;
+    border: 1px solid rgb(12, 0, 0);
+    background: #919191;
+}
+
+h1 img {
+    height: 40px;
+}
+
+header .inner {
+    height: 100%;
+    align-items: end;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+/* inner> bg 100% - ------------------------------------------------------------*/
+header .inner::after {
+    content: '';
+    /* A2 header-bg예제*/
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    z-index: 98;
+    background: #000;
+    transition: .35s;
+}
+
+header .inner.on ::after {
+    height: 200px;
+
+}
+
+/* nav===================================================================================== */
+nav {
+    width: 60%;
+}
+
+nav a {
+    display: block;
+}
+
+nav ul li.main-menu {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 100%;
+    /*absolute하면 부모width 잡아줌*/
+    z-index: 99;
+    display: none;
+}
+
+li.main-menu:hover>a {
+    background: #2b3bcf;
+    color: #fff;
+}
+
+
+
+
+
+
+li.main-menu>a {
+    padding: 10px;
+}
+
+.sub-menu li a {
+    padding: 5px;
+}
+
+.sub-menu li:hover a {
+    background: #2b3bcf;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* slide -------------------------------------------------------------------*/
+.slide-container {
+    height: 300px;
+    overflow: hidden;
+
+}
+
+
+.slide {
+    position: relative;
+}
+
+.slide .summary {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 0;
+    right: 10%;
+    top: 10%;
+    text-align: center;
+}
+
+
+
+/* tabs -----------------------------------------------------------------------*/
+.contents {
+    height: 200px;
+    border: 1px solid #070000;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.tab-menu li a {
+    display: block;
+    padding: 5px;
+    background: #ccc;
+}
+
+.tab-menu li a.on {
+    background: #2b3bcf;
+    color: #fff;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+
+
+
+.tab-menu a{background: #979797;
+color: #fff;
+font-size: 20px;
+position: relative;}
+
+
+
+.notice li {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    
+}
+
+
+.notice, .gallery, .link{width: 100%;}
+
+
+
+
+
+/* footer ------------------------------------------------------------------------------*/
+footer {
+    border: 1px solid #7c7a7c;
+    background: #7b7a7c;
+    border: 1px solid #000;
+
+}
+
+
+.footer .inner {
+    align-items: center;
+}
+
+
+.copyright {
+    flex: 1;
+}
+
+.footer-menu {
+    justify-content: center;
+}
+
+.footer-menu,
+footer .copyright {
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    gap: 50px;
+}
+
+.footer1 img {
+    height: 40px;
+}
+
+
+
+.modal {
+
+
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 92, 230, 0.5);
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    display: none;
+
+
+}
+
+
+.popUp-content {
+    position: absolute;
+    background: #fff;
+    width: 400px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+
+a.close {
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    right: 10px;
+    bottom: 10px;
+}
+
+h2{position: absolute;
+background: #000;
+color: #fff;}
+
+
+
+.footer2{border: 1px solid #000;
+text-align: center;}
+
+
+
+
+
+
+

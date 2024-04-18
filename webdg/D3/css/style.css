@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+:root {
+    --maincolor: #03847f;
+    --subcolor: #349980;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    background: #fff;
+    color: #333333;
+}
+
+
+.flex {
+    display: flex;
+}
+
+/* ---------------------------------------------- */
+
+
+.wrap {
+    width: 100%;
+    height: 970px;
+
+}
+
+
+header {
+    width: 200px;
+    height: 100%;
+    background: var(--maincolor);
+
+
+}
+
+
+main {
+    width: calc(100% - 200px);
+    height: 850px;
+
+}
+
+
+main::before {
+    content: '';
+    z-index: 90;
+    width: 100%;
+    height: 164px;
+    background: #234e41;
+    position: absolute;
+    top: 94px;
+    display: none;
+}
+
+main.on::before {
+    display: block;
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    border: 3px solid var(--maincolor);
+    align-items: center;
+    gap: 50px;
+    background: var(--maincolor);
+    color: #Fff;
+}
+
+
+.footer-menu ul {
+    gap: 50px;
+}
+
+
+
+/* -------------------------------------- */
+
+nav {
+    margin-top: 50px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+}
+
+
+.main-menu {
+    width: 100%;
+    position: relative;
+
+}
+
+.sub-menu {
+    width: 500px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 99;
+    display: flex;
+
+}
+
+
+.submenu-wrap {
+    display: none;
+}
+
+
+.main-menu>a {
+    background: var(--subcolor);
+    padding: 10px;
+    color: #Fff;
+}
+
+.main-menu:hover>a {
+    background: #6eaa8e;
+}
+
+
+.sub-menu li>a {
+    background: #234e41;
+    color: #Ffff;
+    padding: 10px;
+}
+
+.sub-menu li:hover a {
+    background: var(--maincolor);
+}
+
+
+
+
+
+.spot-menu ul {
+    gap: 10px;
+    text-align: center;
+
+
+}
+
+
+.spot-menu {
+    position: absolute;
+    top: 60%;
+    left: 13px;
+    background: #Fff;
+    color: var(--maincolor);
+    font-size: 13px;
+    justify-content: center;
+
+}
+
+
+.tabs {
+    width: 100%;
+    height: 250px;
+    padding: 50px;
+}
+
+/* --------------------------------------- */
+
+.slide.on {
+    display: block;
+}
+
+.slide-container {
+    width: calc(100% -200px);
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    position: relative;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide1 {
+    background-image: url(../image/slide1.jpg);
+}
+
+.slide2 {
+    background-image: url(../image/slide2.jpg);
+}
+
+.slide3 {
+    background-image: url(../image/slide3.jpg);
+}
+
+.slide h3 {
+    background: var(--maincolor);
+    color: #Fff;
+    border-radius: 50px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+
+}
+
+/* ------------------------------------ */
+
+
+.banner {
+    width: 100%;
+    height: 200px;
+    border: 2px solid var(--maincolor);
+}
+
+.banner figure {
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border: 4px solid var(--subcolor);
+    margin-top: 10px;
+    border-radius: 50px 10px;
+    gap: 50px;
+}
+
+
+/* --------------------- */
+
+
+.notice {
+    width: 100%;
+}
+
+.notice ul li {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.notice ul li a {
+    width: 80%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.tabs {
+    height: 250px;
+    width: 100%;
+}
+
+.tab.on {
+    display: block;
+}
+
+.tabs a {
+    display: block;
+}
+
+
+.tab-menu li a {
+    background: var(--subcolor);
+    color: #Fff;
+    padding: 10px;
+}
+
+.tab-menu li.on a {
+    background: var(--maincolor);
+    color: #Fff;
+    padding: 10px;
+}
+
+.tab-menu {
+    padding-bottom: 10px;
+}
+
+
+.tab {
+    position: absolute;
+    display: none;
+}
+
+.tabs,
+.tab-contnets {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}

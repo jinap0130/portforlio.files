@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/*
+color: #f47a20; >> orange
+color: #b6b6b6; >> grey 
+^ font-size: 14px; 
+^100px^2 
+            >> height: 600px
+            >>
+
+ 28px
+ 30px
+
+
+ 100%/ 880px
+
+*/
+
+
+.menu{
+    text-align: left;
+    position: absolute;
+    
+    width: 100px;
+    height: 600px;
+    top: 15%;
+    left: 10%;
+    z-index: 98;
+
+    /* transform: translate(); */
+}
+
+.menu a{
+    width: 100px;
+    height: 100px;
+    color:  #b6b6b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.menu img{
+    background: #f47a20;
+
+}
+
+.menu li{
+    width: 100px;
+    height: 100px;
+    
+    background: #000;
+    opacity: .9;
+}
+/* ========================================== */
+.udam{
+    position: absolute;
+    top:15%;
+    left: 25%;
+    z-index: 98;
+    color: #fff;
+}
+
+.udam h2{
+    line-height: 200%;
+    font-size: 28px;
+}
+.udam h2{
+    line-height: 200%;
+    font-size: 30px;}
+.udam p{
+    line-height: 200%;
+    font-size: 14px;
+    opacity: .5;
+}
+
+
+
+/* =========================================== */
+.myswiper{
+    position: relative;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 880px;
+    position: relative;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a.on{
+    color: #f47a20;
+    
+}

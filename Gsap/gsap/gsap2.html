@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100vh;
+            background: #CDFFFF;
+            position: relative;
+        }
+
+        .stage{
+            width: 100%;
+            height: 100%;
+        }
+        .text {
+            width: 100%;
+            position: absolute;
+            top: 250px;
+            left: 225px;
+            z-index: 99;
+        }
+
+        .title {
+            font-size: 50px;
+            line-height: 60%;
+        }
+
+        .sub {
+            font-size: 48px;
+
+        }
+
+        .desc {
+            font-size: 20px;
+            margin: 30px 0;
+        }
+
+        .button {
+            padding: 10px;
+            border-radius: 99px;
+            background: #D08AAF;
+            width: 150px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 1px 1px 1px grey;
+        }
+
+        .planets{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .RB{
+            position: absolute;
+            bottom: -525PX;
+            right: -100px;
+        }
+
+        .LT{
+            position: absolute;
+            top: -525px;
+            left: -425px;
+        }
+
+        .RT{
+            position: absolute;
+            right: -350px;
+            top: -250px;
+
+        }
+
+        .CT{
+            position: absolute;
+            left: 40%;
+
+        }
+        .RM{position: absolute;
+            right: -35px;
+            top: 40%;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+<div class="stage">
+        <div class="text">
+            <p class="title"><b>PLANET</b></p>
+            <p class="sub">EXPLORATION</p>
+            <P class="desc">Let's explore the planets in<br> spce together</P>
+            <p class="button">READ MORE</p>
+        </div>
+    
+        <div class="planets">
+            <img class="RB" src="/img/1030인트로페이지/rightbottom.png" alt="">
+            <img class="LT" src="/img/1030인트로페이지/lefttop.png" alt="">
+            <img class="RT" src="/img/1030인트로페이지/righttop.png" alt="">
+            <img class="CT" src="/img/1030인트로페이지/center.png" alt="">
+            <img class="RM" src="/img/1030인트로페이지/rightmiddle.png" alt="">
+        </div>
+</div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+    <script>
+        // const >> 유일한 변수로 지정하기 위해 사용하는 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/const
+        const animation = gsap.timeline()
+        // autoAlpha 하위요소들이 투명해지도록 한다. 
+        animation.from('.stage', {autoApha:0})
+                    .from('.title',{x:-550, duration: .4})
+                    .from('.sub', {x:250, duration:.5})
+                    .from('.desc',{y:150, opacity: 0})
+                    .from('.button',{y:50, opacity:0})
+            // stagger 여러 요소를 순차적으로 실행하고 싶을 때 
+                    .from('.planets img', {scale:0, stagger:.3})
+
+    </script>
+</body>
+
+</html>

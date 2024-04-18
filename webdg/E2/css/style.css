@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    background: #fff;
+    color: #333333;
+}
+
+.flex {
+    display: flex;
+}
+
+
+:root {
+    --maincolor: #de5602;
+    --subcolor: #f89f64;
+}
+
+
+/* ------------------------------------- */
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 820px;
+}
+
+
+
+/* ------------------------------- */
+
+header {
+    width: 200px;
+    height: 100%;
+    background: var(--maincolor);
+    text-align: center;
+}
+
+
+nav {
+    width: 100%;
+}
+
+
+nav a {
+    display: block;
+
+
+}
+
+.main-menu>a {
+    background: var(--subcolor);
+    color: #fff;
+    padding: 10px;
+}
+
+.main-menu:hover>a {
+    background: #d46524;
+}
+
+.main-menu {
+
+    width: 100%;
+}
+
+.sub-menu {
+    position: relative;
+    display: none;
+    width: 100%;
+}
+
+.sub-menu li>a {
+    background: #ff8513;
+    color: #fff;
+    padding: 10px;
+}
+
+
+.sub-menu li:hover>a {
+    background: var(--maincolor);
+}
+
+
+
+
+/* --------------------------------- */
+
+.contents {
+    width: 400px;
+    height: 100%;
+    border: 5px solid var(--maincolor);
+}
+
+
+.notice {
+    padding-top: 10px;
+    border: 5px solid var(--subcolor);
+    height: 250px;
+    border-radius: 20px 10px;
+}
+
+
+.notice ul li {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    text-decoration: underline;
+
+}
+
+.notice ul li a {
+    width: 80%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.notice h3>a {
+    display: inline-block;
+    background: var(--maincolor);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px 10px;
+}
+
+.gallery h3>a {
+    display: inline-block;
+    background: var(--maincolor);
+    color: #Fff;
+    padding: 10px;
+    border-radius: 50px 10px;
+}
+
+
+/* -------------------- */
+
+.gallery {
+    margin-top: 10px;
+    border: 5px solid var(--subcolor);
+    height: 300px;
+    padding-top: 10px;
+    border-radius: 20px 10px;
+}
+
+.contents {
+    padding: 10px;
+}
+
+.gallery figcaption {
+    text-align: center;
+    background: var(--subcolor);
+    color: #fff;
+}
+
+/* --------------- */
+
+
+.link ul {
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.link {
+    border: 5px solid var(--subcolor);
+    height: 180px;
+    margin-top: 30px;
+}
+
+.link figure {
+    background: var(--maincolor);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------- */
+
+.slide.on {
+    display: block;
+}
+
+.slide-container {
+    width: calc(100% - 600px);
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide1 {
+    background-image: url(../image/slide1.jpg);
+}
+
+.slide2 {
+    background-image: url(../image/slide2.jpg);
+}
+
+.slide3 {
+    background-image: url(../image/slide3.jpg);
+}
+
+
+.slide h3 {
+    background: var(--subcolor);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    font-size: 25px;
+    border-radius: 20px 10px;
+}
+
+
+
+/* ------------------------------- */
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    background: var(--maincolor);
+    align-items: center;
+    color: #fff;
+}
+
+
+/* ---------------------- */
+
+
+
+.modal-wrap {
+    background: var(--maincolor);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.modal {
+    background: #Fff;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+a.close{background: #000;
+position: absolute;
+bottom: 30px;
+padding: 10px;
+left: 40%;
+color: #fff;}

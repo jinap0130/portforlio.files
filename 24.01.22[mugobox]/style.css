@@ -1,0 +1,483 @@
+/* @import url(/reset.css); */
+@import url(./fonts/font.css);
+@import url(./global.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* 공통속성 */
+.flex {
+    display: flex;
+}
+
+/* body {
+    background-color: bisque;
+} */
+
+
+/* 헤더 */
+header {
+    background: var(--white);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+
+}
+
+header::after {
+    content: '';
+    background: url(./images/menu-bg-pattern.png);
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    z-index: -1;
+    bottom: -6px;
+
+}
+
+
+
+.header-inner {
+    width: calc(100%-140px);
+    position: relative;
+    /* border: 1px solid #000; */
+    height: 95px;
+    margin: auto;
+}
+
+h1 {
+    position: absolute;
+    left: 120px;
+    top: 2px;
+
+}
+
+nav ul {
+    align-items: center;
+    justify-content: space-between;
+    height: 95px;
+    width: 830px;
+    margin: auto;
+}
+
+nav ul li::before {
+    /* position: relative;
+    top: -5px; */
+    content: '\e910';
+    font-family: 'jt-font';
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    color: #ed4043;
+    display: block;
+    opacity: 0;
+    transition: .35sw;
+    padding-bottom: 10px;
+}
+
+nav ul li:hover::before {
+    opacity: 1;
+}
+
+.main-menu a {
+    overflow: hidden;
+
+    position: relative;
+
+    display: block;
+
+    /* border: 1px solid #F00; */
+    height: 21PX;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.025em;
+}
+
+
+.menu-inner {
+    top: 20px;
+    /* border: 1px solid #0f0; */
+}
+
+nav ul li.main-menu span {
+    display: block;
+    text-align: center;
+}
+
+nav ul li.main-menu .menu-inner {
+    position: relative;
+    transition: .35s;
+    top: -21px;
+}
+
+nav ul li.main-menu:hover .menu-inner {
+    top: 0px;
+}
+
+nav ul li:hover a {
+
+    color: #ed4043;
+}
+
+/* ======================================================= */
+
+ul.gnb a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.025em;
+    margin-left: 30px;
+}
+
+nav a,
+ul.gnb a {
+    text-transform: uppercase;
+}
+
+
+ul.gnb {
+    position: absolute;
+    right: 3%;
+    top: 45px;
+}
+
+ul.gnb a::before {
+    font-family: 'jt-font';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: #ed4043;
+    margin-right: 8px;
+}
+
+ul.gnb a.login::before {
+    content: '\e91b';
+}
+
+ul.gnb a.sign::before {
+    content: '\e91c';
+}
+
+
+
+
+/* 24.01.23_ section1(intoroduction) */
+
+
+
+
+
+.desc,
+figure {
+    width: 50%;
+    height: 100vh;
+    /* border: 1px solid #f00; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.desc {
+    background-color: #ed4043;
+    /* z-index: -1.5; */
+    color: #fff;
+    text-align: center;
+    gap: 10px;
+}
+
+.desc p {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.desc h2 {
+    line-height: 40px;
+    font-size: 26px;
+}
+
+.desc h2 b {
+    /* line-height: 40px; */
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+figure {
+    position: relative;
+    /* z-index: -1.5; */
+
+}
+
+figure img {
+    position: absolute;
+    z-index: 98;
+}
+
+#sect1 article figcaption {
+    color: #fff;
+    opacity: .3;
+    font-size: 200px;
+    font-weight: 600;
+    transform: translateY(-100%);
+    transition: .5s;
+}
+
+#sect1 article.on figcaption {
+    transform: translateY(0%);
+}
+
+/* .desc, figure{
+    display: none;
+
+}
+.on{
+    display: block;
+} */
+/* img.on{border: 1px solid #fff;} */
+/* 
+.character ul li a img{
+    position: absolute;
+    z-index: 999;
+
+.character ul li a{
+    position: relative;
+    width: 100%;
+} */
+#sect1 {
+    position: relative;
+    height: 960px;
+}
+
+.character {
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 99;
+}
+
+.character ul {
+    gap: 40px;
+}
+
+.character ul li a {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.character ul li a::after {
+    content: '';
+    position: absolute;
+    width: 93px;
+    height: 93px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+
+    z-index: 70;
+    right: -1.7px;
+    top: -.8px;
+    opacity: 0;
+
+}
+
+article {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+
+article.on {
+    opacity: 1;
+}
+
+.character ul li:hover img {
+    transform: scale(1.1);
+}
+
+.character ul li a.on::after {
+    opacity: 1;
+}
+
+
+
+
+
+#MUGO img {
+    animation: dance 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+#CHICHI img {
+    animation: dance_skew 1.8s ease-out infinite;
+    transform-origin: center bottom;
+}
+@keyframes dance-skew{
+0% {
+    transform: skewX(0deg);
+}
+
+50% {
+    transform: skewX(3deg);
+}
+100% {
+    transform: skewX(-3deg);
+}
+100% {
+    transform: none;}
+
+}
+
+
+#WINDY img {
+    animation: jump 3s cubic-bezier(0.53, 0.03, 0.6, 0.99) infinite;
+    transform-origin: center bottom;
+}
+@keyframes jump{
+0% {
+    transform: translate(0, -8%);
+}
+50% {
+    transform: translate(0, 0);
+}
+100% {
+    transform: translate(0, -8%);
+}
+}
+
+
+#CAGO img {
+    animation: dance_jump 3s ease-out infinite;
+    transform-origin: center bottom;
+}
+@keyframes dance-jump{
+    0% {
+        transform: none;
+    }
+    15% {
+        transform: rotate(-3deg);
+    }
+    30% {
+        transform: rotate(3deg);
+    }
+    45% {
+        transform: rotate(-3deg);
+    }
+    60% {
+        transform: translate3d(0, -5%, 0);
+    }
+    75% {
+        transform: translate3d(0, 1%, 0);
+    }
+    85% {
+        transform: translate3d(0, -3%, 0);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+#ARI img {
+    animation: dance 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    transform-origin: center bottom;
+}
+/* mugo랑 속성 같음 */
+
+#ROK img {
+    animation: wobble 3.5s ease-out infinite;
+    transform-origin: center bottom;
+}
+@keyframes wobble{
+    0% {
+        transform: none;
+    }
+    15% {
+        transform: translate3d(-3%, 0, 0) rotate(-1deg);
+    }
+    30% {
+        transform: translate3d(3%, 0, 0) rotate(2deg);
+    }
+    45% {
+        transform: translate3d(-3%, 0, 0) rotate(-2deg);
+    }
+    60% {
+        transform: translate3d(2%, 0, 0) rotate(1deg);
+    }
+    75% {
+        transform: translate3d(-1%, 0, 0) rotate(-1deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+
+
+/* SECOND PAGE: SECTION2 (#sect2) ================================================================= */
+
+#sect2 {
+    position: relative;
+    height: 960px;
+    width: 100%;
+    border: 1px solid #000;
+
+}
+
+#sect2 h2{
+    /* position: absolute;
+    z-index: 99;
+    width: 100%;
+    color: #f00;
+    transform: translate(50%,50% );
+    left: -6.5rem; */
+
+    margin-top: 115px;
+    font-family: 'Binggrae', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    color: #f0f;
+    text-align: center;
+    letter-spacing: -0.05em;
+    border: 1px solid #000;
+
+
+    }
+
+.sub-menu ul{
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#1b1b1b;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="그룹_3868" transform="translate(-.4)">
+        <path id="사각형_147827" fill="rgba(255,255,255,0)" d="M0 0H34V34H0z" transform="translate(.4)"/>
+        <g id="crosshair" transform="translate(4.569 4.569)">
+            <circle id="타원_9358" cx="12.431" cy="12.431" r="12.431" fill="none" stroke="#1b1b1b" stroke-linejoin="bevel"/>
+            <path id="선_201" d="M4.144 0L0 0" class="cls-3" transform="translate(20.719 12.431)"/>
+            <path id="선_202" d="M5.525 0L0 0" class="cls-3" transform="translate(0 12.431)"/>
+            <path id="선_203" d="M0 5.525L0 0" class="cls-3" transform="translate(12.431)"/>
+            <path id="선_204" d="M0 4.144L0 0" class="cls-3" transform="translate(12.431 20.719)"/>
+        </g>
+    </g>
+</svg>

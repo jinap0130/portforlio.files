@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#1b1b1b}
+        </style>
+    </defs>
+    <g id="그룹_162173" data-name="그룹 162173" transform="translate(16687 -8920)">
+        <path id="사각형_147849" data-name="사각형 147849" transform="translate(-16687 8920)" style="fill:none" d="M0 0h34v34H0z"/>
+        <g id="그룹_162170" data-name="그룹 162170" transform="translate(-16786.496 8544.302)">
+            <path id="사각형_147795" data-name="사각형 147795" class="cls-2" transform="translate(104.497 377.698)" d="M0 0h21.576v28.389H0z"/>
+            <path id="사각형_147796" data-name="사각형 147796" class="cls-2" transform="translate(108.083 380.563)" d="M0 0h14.404v17.863H0z"/>
+            <g id="그룹_162169" data-name="그룹 162169" transform="translate(110.838 384.933)">
+                <path id="선_541" data-name="선 541" class="cls-2" d="M0 0h8.895"/>
+                <path id="선_542" data-name="선 542" class="cls-2" transform="translate(0 3.813)" d="M0 0h8.895"/>
+                <path id="선_543" data-name="선 543" class="cls-2" transform="translate(0 7.627)" d="M0 0h4.447"/>
+            </g>
+            <path id="패스_83721" data-name="패스 83721" class="cls-2" d="M127.606 380.021a4.818 4.818 0 0 1 0 9.636" transform="translate(-1.609 .838)"/>
+            <path id="패스_83722" data-name="패스 83722" class="cls-2" d="M127.606 381.939a2.884 2.884 0 0 1 0 5.767" transform="translate(-1.609 .854)"/>
+            <path id="사각형_148495" data-name="사각형 148495" class="cls-2" transform="translate(113.782 401.015)" d="M0 0h3.007v2.791H0z"/>
+        </g>
+    </g>
+</svg>

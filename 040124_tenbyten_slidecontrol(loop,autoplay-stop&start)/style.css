@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+.flex {
+    display: flex;
+}
+
+html,
+body {
+    width: 100vw;
+}
+
+
+/* ---------------------------------------------- */
+.header {
+    width: 1140px;
+    height: 131px;
+    border: 1px solid #000;
+    margin: auto;
+}
+
+.top {
+    width: 1140px;
+    height: 86px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f00;
+}
+.top h1{
+    flex: 3;
+}
+.top nav{
+    flex: 7;
+    text-align: center;
+}
+.menu{
+    width: 1140px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* slide1 */
+
+.mainRolling {
+    height: 600px;
+}
+
+.desc {
+    position: absolute;
+    width:80%;
+    left: 300px;
+    bottom: 250px;
+    width: 80%;
+    border: 1px solid #000;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    font-weight: bold;
+}
+
+.desc>p {
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+a.arrow{
+    border: 1px solid #f00;
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 72px;
+    background-image: url(./imgs/sp_icon.png);
+
+    top: 50%;
+    z-index: 99;
+    transform: translateY(-50%);
+    color: transparent;
+    /* ^a 안에 글씨 보이지 말라고  */
+}
+
+a.prev{
+    background-position: 0px -110px;
+    left: 50px;
+}
+a.next{
+    background-position: -58px -110px;
+    right: 50px;
+}
+/* -------------------------------------------- */
+.lookbook{width: 100%;
+position: relative;
+overflow: hidden;}
+
+.lookbook ul{
+    
+    position: relative;
+}
+
+
+.lookbook span{
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+span.prev{
+    left: -180px;
+}
+
+span.next{
+    right: -180px;
+transform: rotate(180deg) translateY(258px);
+}
+
+span>img{
+    transform: scale(20%);
+}

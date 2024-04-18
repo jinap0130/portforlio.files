@@ -1,0 +1,16 @@
+@font-face {
+    font-family: pretendard;
+    src: url(/font/Pretendard-Regular.woff)
+}
+
+@font-face{
+    font-family: pretendard;
+    src: url(./font/#)
+}
+html, body{height:100%}
+
+.wrap{font-family: pretendard;
+height:100% ;
+background-size: cover;
+background-image: url(./img/landing_bg.jpg);
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- forEach!!!!! .forEach() -->
+    <style>
+        li.on{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="on"> on</button>
+    <button class="off"> off</button>
+
+    <figure>
+        <img src="./scriptpractice_imgs/pic_bulboff.gif" alt="">
+    </figure>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        //jquery** version
+        // $('.on').click(function(){
+        //     $('figure img').attr({'src':'./scriptpractice_imgs/pic_bulbon.gif'})
+        // })
+
+        // $('.off').click(function(){
+        //     $('figure img').attr({'src':'./scriptpractice_imgs/pic_bulboff.gif'})
+        // })
+
+
+        // //javascript**version
+        // let onBtn=document.querySelector('.on')
+        // let offBtn=document.querySelector('.off')
+        // console.log(onBtn);
+
+        // //onBtn.addEventListener('click',function(){})
+        // onBtn.addEventListener('click',()=>{
+        //     document.querySelector('figure img').setAttribute('src','./scriptpractice_imgs/pic_bulbon.gif')
+        // })
+       
+        // offBtn.addEventListener('click',()=>{
+        //     document.querySelector('figure img').setAttribute('src','./scriptpractice_imgs/pic_bulboff.gif')
+        // })
+    </script>
+
+
+
+
+
+
+
+
+<!-- list add/remove class -->
+
+    <ul>
+        <li>item#1</li>
+        <li>item#2</li>
+        <li>item#3</li>
+        <li>item#4</li>
+        <li>item#5 </li>
+        <li>item#6</li>
+        <li>item#7</li>
+    </ul>
+
+    <!-- <script>
+        
+        $("li").each(function (idx) {
+            //   console.log(idx+'번째:'+$(this).text());
+            $(this).delay(idx * 500).animate({ 'marginLeft': '500px' })
+        });
+
+    </script> -->
+
+    <script>
+        // let liElems=$('li')
+        // console.log(liElems)
+
+        // $('li').click(function(){
+        //     // $('li').removeClass('on') --> 일일이 클래스를 지웅기 때문에 메모리 효율을 위해 .SISBLINGS()추가
+        //     $('li').siblings().removeClass('on') 
+        //     $(this).addClass('on')
+        // })
+
+
+        // .querySelector VS .querySelectorAll
+
+        // let liElems=document.querySelectorAll('li')
+        //     console.log(liElems);
+        //     console.log(liElems[0])
+        //     console.log(liElems[1])
+        //     console.log(liElems[2])
+        //     console.log(liElems[3])
+        //     console.log(liElems[4])
+        //     console.log(liElems[5])
+        //     console.log(liElems[6])
+    
+        let liElems=document.querySelectorAll('li')
+        liElems.forEach((item,idx)=>{
+            // console.log(idx,item);
+            //.forEach 두번 
+            item.addEventListener('click',function(){
+                liElems.forEach(function(li){
+                    li.classList.remove('on')
+                })
+
+            this.classList.add('on')
+            })
+        })
+    </script>
+</body>
+
+</html>

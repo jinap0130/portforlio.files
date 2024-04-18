@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세계의 미술작품</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+
+
+    <header>
+        <div class="inner flex on">
+            <h1><img src="./images/logo1.jpg" alt=""></h1>
+            <nav>
+                <ul class="flex">
+                    <li class="main-menu">
+                        <a href="#">소장처별</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">한국</a></li>
+                            <li><a href="#">프랑스</a></li>
+                            <li><a href="#">이탈리아</a></li>
+                            <li><a href="#">독일</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#">장르별</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">회화</a></li>
+                            <li><a href="#">판화</a></li>
+                            <li><a href="#">공예/고대유물</a></li>
+                            <li><a href="#">그외</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#">테마별</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">초상화/인물</a></li>
+                            <li><a href="#">종교</a></li>
+                            <li><a href="#">신화/문학</a></li>
+                            <li><a href="#">일상/스포츠</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#">시대별</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">1900년대 이전</a></li>
+                            <li><a href="#">1900년대</a></li>
+                            <li><a href="#">현대</a></li>
+                            <li><a href="#">그외</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="slide-container">
+            <div class="slide-wrap flex">
+                <div class="slide">
+                    <div class="summary">
+                        <h2>슬라이드1</h2>
+                    </div>
+                    <img src="./images/slide(1).jpg" alt="">
+                </div>
+                <div class="slide">
+                    <div class="summary">
+                        <h2>슬라이드2</h2>
+
+                    </div>
+                    <img src="./images/slide(2).jpg" alt="">
+                </div>
+                <div class="slide">
+                    <div class="summary">
+                        <h2>슬라이드3</h2>
+                    </div>
+                    <img src="./images/slide(3).jpg" alt="">
+                </div>
+            </div>
+
+
+            <script src="./script/jquery-3.7.1.min.js"></script>
+            <script>
+
+                $('.slide:gt(0)').hide()
+                let slideIndex = 0
+
+
+                function fadeSlide() {
+                    slideIndex++
+                    console.log(slideIndex)
+
+                    if (slideIndex === 3) {
+                        slideIndex = 0
+                    }
+
+                    $('.slide').fadeOut()
+                    $('.slide').eq(slideIndex).fadeIn()
+
+
+                }
+
+                setInterval(fadeSlide, 3000)
+
+
+
+            </script>
+
+
+
+
+
+        </div>
+
+
+
+        <div class="contents flex">
+
+
+            <div class="notice">
+
+
+                <h3>공지사항</h3>
+                <ul class="notice-tab">
+                    <li class="pop-up"><a href="#">
+                            <p>첫번째 공지사항입니다.</p>
+                        </a><span>2021.12.09</span></li>
+                    <li><a href="#">
+                            <p>두번째 공지사항입니다.</p>
+                        </a><span>2021.12.05</span></li>
+                    <li><a href="#">
+                            <p>세번째 공지사항입니다.</p>
+                        </a><span>2021.12.01</span></li>
+                    <li><a href="#">
+                            <p>네번째 공지사항입니다.</p>
+                        </a><span>2021.11.09</span> </li>
+                    <li><a href="#">
+                            <p>다섯번째 공지사항입니다.</p>
+                        </a><span>2021.10.09</span></li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="gallrery">
+                <h3>갤러리</h3>
+                <div class="gallrery img">
+                    <ul class="flex">
+                        <li><a href="#"><img src="./images/gallery1.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/gallery2.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/gallery3.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <h3>배너</h3>
+                <div class="banner img">
+                    <a href="link image"><img src="./images/banner.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <footer>
+
+
+
+        <div class="inner flex">
+            <div class="footer1">
+                <h1><img src="./images/logo1.jpg" alt=""></h1>
+            </div>
+
+
+            <div class="copyright">
+                <p>Copyright © 2021 Daegu ART MUSEUM All rights reserved.</p>
+            </div>
+
+
+            <ul class="footer2 flex">
+                <li><a href="#"><img src="./images/youtube.png" alt="유튜브"></a></li>
+                <li><a href="#"><img src="./images/face.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="./images/insta.png" alt="인스타"></a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+
+
+    <div class="modal">
+        <div class="popUp-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Earum placeat nisi sunt iusto enim ullam quae quam repudiandae quaerat sequi?
+            </p>
+            <a href="#" class="close">닫기
+            </a>
+        </div>
+    </div>
+
+
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <script src="./script/index.js"></script>
+
+
+    <slide>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input,
+        #add-text[type='text'] {
+            padding: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>나의할일</h1>
+        <input type="text" id="add-text">
+        <button id="add-button">추가</button>
+        <div class="container">
+            <p>할일목록</p>
+            <ul id="memo-list">
+                
+
+            </ul>
+        </div>
+    </div>
+    <script src="/jquery-3.7.1.min.js"></script>
+
+    <script>
+        const addButton= document.getElementById('add-button')
+        const addText= document.getElementById('add-text')
+        const memoList=document.getElementById('memo-list')
+        addText.focus()//빈칸에 텍스트 입력전 깜빡*2 
+
+        //save mamo
+        function saveMemo(text){
+            const memos=JSON.parse(localStorage.getItem('memos')||'[]')
+            memos.push(text)
+            localStorage.setItem('memos',JSON.stringify(memos))
+        }
+
+
+        //delete memo
+        function removeMemo(text){
+
+            const memos=JSON.parse(localStorage.getItem('memos')||'[]')
+            localStorage.setItem('memos',JSON.stringify(memos.filter(memo=>memo!==text)))
+            //filter: 조건에 맞는 값만 return됨 / !: not
+        }
+
+        //edit memo
+        function updateMemo(oldText, newText){
+
+        }
+
+        //reading the data from the localstorage
+        function loadMemos(){
+            const memos=Json.parse(localStorage.getItem('memos')||'[]')//값이 있으면 가지고 와, 없으면 빈값이라도 
+            memos.forEach(function(text){
+                addMemoDom(text)
+
+            })
+        }
+
+
+        function addMemoDom(text){
+            const li=document.createElement('li')
+            li.classList.add('flex')
+            const p=document.createElement('p')
+
+            const div=document.createElement('div')
+            const editBtn=document.createElement('button')
+            const deleteBtn=document.createElement('button')
+            
+
+            p.textContent=text// p-text property 
+            editBtn.textContent='수정'
+            deleteBtn.textContent='삭제'
+            
+
+            li.appendChild(p)
+            li.appendChild(div)
+            div.appendChild(editBtn)
+            div.appendChild(deleteBtn)            
+            memoList.appendChild(li)
+
+            deleteBtn.addEventListener('click',function(){
+                removeMemo(p.textContent)
+                li.parentNode.removeChild(li)
+
+            })
+
+            editBtn.addEventListener('click',function(){
+                const editInput=document.createElement('input')
+                editInput.type='type'
+                editInput.value=p.textContent
+                const saveBtn=document.createElement('button')
+                saveBtn.textContent='저장'
+
+                li.replaceChild(editInput,p)
+                div.replaceChild(saveBtn, editBtn)
+                
+                saveBtn.addEventListener('click',function(){
+                    updateMemo(p.textContent,editInput.value)
+                    editInput.replaceWith(p)
+                    p.textContent=editInput.value
+                    saveBtn.replaceWith(editBtn)
+                })
+            })
+        }
+
+        addButton.addEventListener('click',function(){
+            const text=addText.value.trim()//빈값들어오면 앞뒤 스페이스 값 잘라버리기
+            if(text){
+                addMemoDom(text)
+                saveMemo(text)
+                addText.value=''
+            }
+        })
+
+        
+
+
+        loadMemos();//*****
+    </script>
+
+</body>
+</html>

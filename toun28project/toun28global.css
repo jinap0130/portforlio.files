@@ -1,0 +1,37 @@
+:root{
+    --primaryColor:#006a75;
+    --secondaryColor:#cadcde;
+    --white:#fff;
+    --grey:#dad9d9;
+    --blackApple:#1b1b1b;
+    --blackSlack: #1a1c20;
+
+    /* --mainEng-font:"글씨체";
+    --mainKor-font:"글씨체";
+    --Bold-font:"글씨체"; 
+    
+    
+    ^ 글씨체 다운 받아서 쓰기 
+    */
+
+
+    font-family: var(--mainKor-font);
+
+    body{
+        color: var();
+    }
+
+    /* --gap1rem:gap:12rem; 
+    
+    선생님 예시 참고: 변경가능 */
+
+
+}
+
+/* logo: 50px (100px)
+manu bar> font-size: 16px(40px)  
+h2: 42px
+h3: 22px
+
+나눔고딕체( 네이버 나눔) >>변경 가능
+*/

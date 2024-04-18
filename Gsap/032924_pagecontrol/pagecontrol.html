@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./pagecontrol.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1" class="on">HOME</a></li>
+            <li><a href="#section2">PROJECT</a></li>
+            <li><a href="#section3">WORK</a></li>
+            <li><a href="#section4">GRAPHICS</a></li>
+            <li><a href="#section5">ABOUT</a></li>            
+        </ul>
+    </nav>
+    <main>
+        <!-- section#section$*5 /$= 변하는 값 -->
+        <section id="section1" class="item" data-bgColor="#B5b5b5">
+            <h2>JINA PARK</h2>
+        </section>
+        <section id="section2" class="item" data-bgColor="#7b7461">
+            <h2>PROJECT</h2>
+        </section>
+        <section id="section3" class="item" data-bgColor="#cad358">
+            <h2>WORK</h2>
+        </section>
+        <section id="section4" class="item" data-bgColor="#bdbd49d">
+            <h2>GRAPHICS</h2>
+        </section>
+        <section id="section5" class="item" data-bgColor="#e1ded7">
+            <h2>ABOUT</h2>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+    <script src="./pageControl.js"></script>
+</body>
+
+</html>
